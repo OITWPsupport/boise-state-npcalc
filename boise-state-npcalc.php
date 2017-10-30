@@ -12,7 +12,7 @@ define( 'NPCALC_PATH', plugin_dir_url(__FILE__) );
 
 function bsu_npcalc_shortcode() {
 
-	wp_register_script( 'params', NPCALC_PATH . '/npcalc.js' ) );
+	wp_register_script( 'params', NPCALC_PATH . '/npcalc.js' ) ;
 	wp_enqueue_script('params');
 
 	wp_register_style( 'npcalc-css', NPCALC_PATH . 'npcalc.css' );
