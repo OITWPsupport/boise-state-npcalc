@@ -71,9 +71,7 @@ $str = <<<EOT
 
 		<!-- dv_npc_s0 -->
 		<div id="dv_npc_s0">
-			Welcome to Boise State University's net price calculator. Begin by reading and agreeing to the statement below. 
-			Then follow the instructions on the subsequent screens to receive an estimate of how much students similar to you paid to attend 
-			Boise State University in 2015-16.
+			Welcome to Boise State University's Net Price Calculator. Begin by reading and agreeing to the statement below. Then follow the instructions on the subsequent screens to receive an estimate of how much students similar to you paid to attend Boise State University in 2015-16.
 			<br />
 			<br />
 
@@ -88,6 +86,7 @@ $str = <<<EOT
 			Students must complete the Free Application for Federal Student Aid (FAFSA) in order to be eligible for,
 			and receive, an actual financial aid award that includes Federal grant, loan, or work-study assistance.
 			For more information on applying for Federal student aid, go to <a href="http://www.fafsa.ed.gov/" target="_blank">http://www.fafsa.ed.gov/</a>
+			<br /><br />
 			<strong>Note:</strong> Any information that you provide on this site is confidential. The Net Price Calculator does not store your responses or ask for personal identifying information of any kind.
 			<a href="JavaScript:GoNext()">I Agree</a>
 		</div>
@@ -95,7 +94,7 @@ $str = <<<EOT
 		<!-- dv_npc_s1 -->
 		<div id="dv_npc_s1" class="hidden">
 			<span>
-				<span class="label">Financial aid:<br /></span>
+				<span class="label">Financial aid:<br /><br /></span>
 				<span>
 					Do you plan to apply for financial aid?<br />
 					<span id="s_fa_0"><input type="radio" name="rb_financialaid" value="0" title="Yes, I plan to apply for financial aid." />Yes</span>&nbsp;&nbsp;
@@ -105,13 +104,13 @@ $str = <<<EOT
 			<br />
 			<br />
 			<span>
-				<span class="label">Age:</span>
+				<span class="label">Age:<br /></span>
 				<span><input id="txt_age" type="text" value="" size="6" maxlength="4" title="How old are you?" /></span>
 			</span>
 			<br />
 			<br />
 			<span>
-				<span class="label">Living arrangement:<br /><br /><br /><br /></span>
+				<span class="label">Living arrangement:<br /><br /><br /><br /><br /></span>
 				<span>
 					Where do you plan to live while attending this institution?<br />
 					<span id="s_ls_0"><input type="radio" name="rb_livingstatus" value="0" title="On-campus (in a residence hall, dormitory, or on-campus apartment)" />On-campus (in a residence hall, dormitory, or on-campus apartment)</span><br />
@@ -407,5 +406,4 @@ EOT;
 	return $str;
 }
 	add_shortcode('bsu_npcalc', 'bsu_npcalc_shortcode');
-?>
 ?>
