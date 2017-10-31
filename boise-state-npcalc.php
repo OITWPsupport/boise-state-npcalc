@@ -88,7 +88,7 @@ $str = <<<EOT
 			For more information on applying for Federal student aid, go to <a href="http://www.fafsa.ed.gov/" target="_blank">http://www.fafsa.ed.gov/</a>
 			<br /><br />
 			<strong>Note:</strong> Any information that you provide on this site is confidential. The Net Price Calculator does not store your responses or ask for personal identifying information of any kind.
-			<a href="JavaScript:GoNext()">I Agree</a>
+			<a href="JavaScript:GoNext()">I&nbsp;Agree</a>
 		</div>
 
 		<!-- dv_npc_s1 -->
@@ -151,7 +151,7 @@ $str = <<<EOT
 			<br />
 			<br />
 			<span>
-				<span class="label">Children:<br /><br /><br /></span>
+				<span class="label">Children:<br /><br /><br /><br /></span>
 				<span>
 					Are you (the student) the primary source of financial support for any children?<br />
 					<input type="radio" name="rb_numberofchildren" value="1" title="Yes" />Yes<br />
@@ -169,136 +169,95 @@ $str = <<<EOT
 
 		<!-- dv_npc_s3 -->
 		<div id="dv_npc_s3" class="hidden">
-			<table class="formtable">
-				<tr>
-					<td><span class="title1">Number in Family:</span></td>
-					<td>
-						<span class="title2">How many people are in your family's household?</span><br />
-						<span>(Count yourself, your parent(s), and your parents' other dependent children.)</span>
-					</td>
-				</tr>
-				<tr>
-					<td>&nbsp;</td>
-					<td>
-						<input type="radio" name="rb_numinfamily_dep" id="rb_numinfamily_dep2" value="Two|2" /><label for="rb_numinfamily_dep2">Two</label><br />
-						<input type="radio" name="rb_numinfamily_dep" id="rb_numinfamily_dep3" value="Three|3" /><label for="rb_numinfamily_dep3">Three</label><br />
-						<input type="radio" name="rb_numinfamily_dep" id="rb_numinfamily_dep4" value="Four|4" /><label for="rb_numinfamily_dep4">Four</label><br />
-						<input type="radio" name="rb_numinfamily_dep" id="rb_numinfamily_dep5" value="Five|5" /><label for="rb_numinfamily_dep5">Five</label><br />
-						<input type="radio" name="rb_numinfamily_dep" id="rb_numinfamily_dep6" value="Six or more|6" /><label for="rb_numinfamily_dep6">Six or more</label>
-					</td>
-				</tr>
-				<tr>
-					<td><span class="title1">Number in College:</span></td>
-					<td>
-						<span class="title2">Of the number in your family above, how many will be in college next year?</span><br />
-						<span>(Count yourself and your siblings; do not count your parents.)</span>
-					</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>
-						<input type="radio" name="rb_numincollege_dep" id="rb_numincollege_dep1" value="One child|1" /><label for="rb_numincollege_dep1">One child</label><br />
-						<input type="radio" name="rb_numincollege_dep" id="rb_numincollege_dep2" value="Two children|2" /><label for="rb_numincollege_dep2">Two children</label><br />
-						<input type="radio" name="rb_numincollege_dep" id="rb_numincollege_dep3" value="Three or more children|3" /><label for="rb_numincollege_dep3">Three or more children</label><br />
-					</td>
-				</tr>
-				<tr>
-					<td><span class="title1">Household Income:</span></td>
-					<td>
-						<span class="title2">What is your annual household income after taxes?</span><br />
-						<ul>
-							<li>Include income earned by yourself and your parent(s).</li>
-							<li>Include income from work, child support, and other sources.</li>
-							<li>If your parent is single, separated, or divorced, include the income for the parent with whom you live.</li>
-							<li>If the parent with whom you live is remarried, include both your parent's income and his/her spouse's income.</li>
-						</ul>
-						<input type="radio" name="rb_householdincome_dep" value="0" title="Less than $30,000" />Less than $30,000<br />
-						<input type="radio" name="rb_householdincome_dep" value="1" title="Between $30,000 and $39,999" />Between $30,000 - $39,999<br />
-						<input type="radio" name="rb_householdincome_dep" value="2" title="Between $40,000 and $49,999" />Between $40,000 - $49,999<br />
-						<input type="radio" name="rb_householdincome_dep" value="3" title="Between $50,000 and $59,999" />Between $50,000 - $59,999<br />
-						<input type="radio" name="rb_householdincome_dep" value="4" title="Between $60,000 and $69,999" />Between $60,000 - $69,999<br />
-						<input type="radio" name="rb_householdincome_dep" value="5" title="Between $70,000 and $79,999" />Between $70,000 - $79,999<br />
-						<input type="radio" name="rb_householdincome_dep" value="6" title="Between $80,000 and $89,999" />Between $80,000 - $89,999<br />
-						<input type="radio" name="rb_householdincome_dep" value="7" title="Between $90,000 and $99,999" />Between $90,000 - $99,999<br />
-						<input type="radio" name="rb_householdincome_dep" value="8" title="Between Above $99,999" />Above $99,999<br />
-					</td>
-				</tr>
-				<tr>
-					<td>&nbsp;</td>
-					<td>
-						<a href="javascript:GoPrevious()">Previous</a>
-						&nbsp;&nbsp;
-						<a href="javascript:GoNext()">Continue</a>
-					</td>
-				</tr>
-			</table>
+			<span>
+				<span class="label">Number in Family:<br /><br /><br /><br /><br /><br /><br /></span>
+				<span>
+					How many people are in your family's household?</span><br />
+					(Count yourself, your parent(s), and your parents' other dependent children.)<br />
+					<input type="radio" name="rb_numinfamily_dep" id="rb_numinfamily_dep2" value="Two|2" /><label for="rb_numinfamily_dep2">Two</label><br />
+					<input type="radio" name="rb_numinfamily_dep" id="rb_numinfamily_dep3" value="Three|3" /><label for="rb_numinfamily_dep3">Three</label><br />
+					<input type="radio" name="rb_numinfamily_dep" id="rb_numinfamily_dep4" value="Four|4" /><label for="rb_numinfamily_dep4">Four</label><br />
+					<input type="radio" name="rb_numinfamily_dep" id="rb_numinfamily_dep5" value="Five|5" /><label for="rb_numinfamily_dep5">Five</label><br />
+					<input type="radio" name="rb_numinfamily_dep" id="rb_numinfamily_dep6" value="Six or more|6" /><label for="rb_numinfamily_dep6">Six or more</label>
+				</span>
+				<span class="label">Number in College:<br /><br /><br /><br /><br /></span>
+				<span>
+					Of the number in your family above, how many will be in college next year?<br />
+					(Count yourself and your siblings; do not count your parents.)
+					<input type="radio" name="rb_numincollege_dep" id="rb_numincollege_dep1" value="One child|1" /><label for="rb_numincollege_dep1">One child</label><br />
+					<input type="radio" name="rb_numincollege_dep" id="rb_numincollege_dep2" value="Two children|2" /><label for="rb_numincollege_dep2">Two children</label><br />
+					<input type="radio" name="rb_numincollege_dep" id="rb_numincollege_dep3" value="Three or more children|3" /><label for="rb_numincollege_dep3">Three or more children</label><br />
+				</span>
+				<span class="label">Household Income:</span><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+				<span>
+					What is your annual household income after taxes?<br />
+					<ul>
+						<li>Include income earned by yourself and your parent(s).</li>
+						<li>Include income from work, child support, and other sources.</li>
+						<li>If your parent is single, separated, or divorced, include the income for the parent with whom you live.</li>
+						<li>If the parent with whom you live is remarried, include both your parent's income and his/her spouse's income.</li>
+					</ul>
+					<input type="radio" name="rb_householdincome_dep" value="0" title="Less than $30,000" />Less than $30,000<br />
+					<input type="radio" name="rb_householdincome_dep" value="1" title="Between $30,000 and $39,999" />Between $30,000 - $39,999<br />
+					<input type="radio" name="rb_householdincome_dep" value="2" title="Between $40,000 and $49,999" />Between $40,000 - $49,999<br />
+					<input type="radio" name="rb_householdincome_dep" value="3" title="Between $50,000 and $59,999" />Between $50,000 - $59,999<br />
+					<input type="radio" name="rb_householdincome_dep" value="4" title="Between $60,000 and $69,999" />Between $60,000 - $69,999<br />
+					<input type="radio" name="rb_householdincome_dep" value="5" title="Between $70,000 and $79,999" />Between $70,000 - $79,999<br />
+					<input type="radio" name="rb_householdincome_dep" value="6" title="Between $80,000 and $89,999" />Between $80,000 - $89,999<br />
+					<input type="radio" name="rb_householdincome_dep" value="7" title="Between $90,000 and $99,999" />Between $90,000 - $99,999<br />
+					<input type="radio" name="rb_householdincome_dep" value="8" title="Between Above $99,999" />Above $99,999<br />
+				</span>
+				<br />
+				<a href="javascript:GoPrevious()">Previous</a>
+				&nbsp;&nbsp;
+				<a href="javascript:GoNext()">Continue</a>
+			</span>
 		</div>
 
 		<!-- dv_npc_s4 -->
 		<div id="dv_npc_s4" class="hidden">
-			<table class="formtable">
-				<tr>
-					<td><span class="title1">Number in Family:</span></td>
-					<td>
-						<span class="title2">How many people are in your family's household?</span><br />
-						<span id="spanNumInFamilyHint" class="hidden">Count yourself and your spouse (if applicable). </span>
-						<span id="spanNumInFamilyHintWithChildren" class="hidden">Count yourself, your spouse (if applicable), and any dependent children.</span>
-					</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>
-						<div id="divFirstOptionForNumInFamilyWithChildren" class="hidden">
-							<input type="radio" name="rb_indnuminfamily" value="One|1" title="One" />One<br />
-						</div>
-						<input type="radio" name="rb_indnuminfamily" value="Two|2" title="Two" />Two<br />
-						<div id="divNumInFamilyWithChildren" class="hidden">
-							<input type="radio" name="rb_indnuminfamily" value="Three|3" title="Three" />Three<br />
-							<input type="radio" name="rb_indnuminfamily" value="Four|4" title="Four" />Four<br />
-							<input type="radio" name="rb_indnuminfamily" value="Five|5" title="Five" />Five<br />
-							<input type="radio" name="rb_indnuminfamily" value="Six or more|6" title="Six or more" />Six or more<br />
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td><span class="title1">Number in College:</span></td>
-					<td>
-						<span class="title2">Of the number in your family above, how many will be in college next year?</span><br />
-					</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>
-						<input type="radio" name="rb_indnumincollege" value="One|1" title="One" />One<br />
-						<span id="spanIndNumInCollegeTwoOrMore" class="hidden"><input type="radio" name="rb_indnumincollege" value="Two or more|2" title="Two or more" />Two or more<br /></span>
-						<span id="spanIndNumInCollegeTwo" class="hidden"><input type="radio" name="rb_indnumincollege" value="Two|2" title="Two" />Two<br /></span>
-					</td>
-				</tr>
-				<tr>
-					<td><span class="title1">Household Income:</span></td>
-					<td>
-						<span class="title2">What is your annual household income after taxes?</span><br />
-						<span>(Include income from work, child support, and other sources; if you are married, include your spouse's income.)</span><br /><br />
-						<input type="radio" name="rb_householdincome_ind" value="0" title="Less than $30,000" />Less than $30,000<br />
-						<input type="radio" name="rb_householdincome_ind" value="1" title="Between $30,000 and $39,999" />Between $30,000 - $39,999<br />
-						<input type="radio" name="rb_householdincome_ind" value="2" title="Between $40,000 and $49,999" />Between $40,000 - $49,999<br />
-						<input type="radio" name="rb_householdincome_ind" value="3" title="Between $50,000 and $59,999" />Between $50,000 - $59,999<br />
-						<input type="radio" name="rb_householdincome_ind" value="4" title="Between $60,000 and $69,999" />Between $60,000 - $69,999<br />
-						<input type="radio" name="rb_householdincome_ind" value="5" title="Between $70,000 and $79,999" />Between $70,000 - $79,999<br />
-						<input type="radio" name="rb_householdincome_ind" value="6" title="Between $80,000 and $89,999" />Between $80,000 - $89,999<br />
-						<input type="radio" name="rb_householdincome_ind" value="7" title="Between $90,000 and $99,999" />Between $90,000 - $99,999<br />
-						<input type="radio" name="rb_householdincome_ind" value="8" title="Above $99,999" />Above $99,999<br />
-					</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>
+			<span class="label">Number in Family:</span><br /><br /><br />
+			<span>
+				How many people are in your family's household?<br />
+				Count yourself and your spouse (if applicable).<br />
+				Count yourself, your spouse (if applicable), and any dependent children.<br />
+				<div id="divFirstOptionForNumInFamilyWithChildren" class="hidden">
+					<input type="radio" name="rb_indnuminfamily" value="One|1" title="One" />One<br />
+				</div>
+				<input type="radio" name="rb_indnuminfamily" value="Two|2" title="Two" />Two<br />
+				<div id="divNumInFamilyWithChildren" class="hidden">
+					<input type="radio" name="rb_indnuminfamily" value="Three|3" title="Three" />Three<br />
+					<input type="radio" name="rb_indnuminfamily" value="Four|4" title="Four" />Four<br />
+					<input type="radio" name="rb_indnuminfamily" value="Five|5" title="Five" />Five<br />
+					<input type="radio" name="rb_indnuminfamily" value="Six or more|6" title="Six or more" />Six or more
+				</div>
+			</span>
+			<span class="label">Number in College:</span><br /><br /><br /><br />
+			<span>
+				Of the number in your family above, how many will be in college next year?<br />
+				<input type="radio" name="rb_indnumincollege" value="One|1" title="One" />One<br />
+				<span id="spanIndNumInCollegeTwoOrMore" class="hidden"><input type="radio" name="rb_indnumincollege" value="Two or more|2" title="Two or more" />Two or more<br /></span>
+				<span id="spanIndNumInCollegeTwo" class="hidden"><input type="radio" name="rb_indnumincollege" value="Two|2" title="Two" />Two<br /></span>
+			</span>
+
+			<span class="label">Household Income:</span><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+			<span>
+				What is your annual household income after taxes?<br />
+				(Include income from work, child support, and other sources; if you are married, include your spouse's income.)</span><br />
+				<input type="radio" name="rb_householdincome_ind" value="0" title="Less than $30,000" />Less than $30,000<br />
+				<input type="radio" name="rb_householdincome_ind" value="1" title="Between $30,000 and $39,999" />Between $30,000 - $39,999<br />
+				<input type="radio" name="rb_householdincome_ind" value="2" title="Between $40,000 and $49,999" />Between $40,000 - $49,999<br />
+				<input type="radio" name="rb_householdincome_ind" value="3" title="Between $50,000 and $59,999" />Between $50,000 - $59,999<br />
+				<input type="radio" name="rb_householdincome_ind" value="4" title="Between $60,000 and $69,999" />Between $60,000 - $69,999<br />
+				<input type="radio" name="rb_householdincome_ind" value="5" title="Between $70,000 and $79,999" />Between $70,000 - $79,999<br />
+				<input type="radio" name="rb_householdincome_ind" value="6" title="Between $80,000 and $89,999" />Between $80,000 - $89,999<br />
+				<input type="radio" name="rb_householdincome_ind" value="7" title="Between $90,000 and $99,999" />Between $90,000 - $99,999<br />
+				<input type="radio" name="rb_householdincome_ind" value="8" title="Above $99,999" />Above $99,999<br />
+
 						<a href="javascript:GoPrevious()">Previous</a>
 						&nbsp;&nbsp;
 						<a href="javascript:GoNext()">Continue</a>
-					</td>
-				</tr>
-			</table>
+			</span>
 		</div>
 
 		<!-- div with summary data -->
@@ -312,51 +271,25 @@ $str = <<<EOT
 		<!-- dv_npc_s6 -->
 		<div id="dv_npc_s6" class="hidden">
 
-			<table class="formtable">
-				<tr>
-					<td>
-						&nbsp;&nbsp;&nbsp;&nbsp;<span class="header">Academic Year: 2015-16</span>
-					</td>
-				</tr>
-				<tr>
-					<td>Estimated tuition and fees</td>
-					<td><span id="s_etf">$00,000</span></td>
-				</tr>
-				<tr>
-					<td>
-						<span>+</span> Estimated room and board charges
-						<div>(Includes rooming accommodations and meals)</div>
-					</td>
-					<td><span id="s_erb">$00,000</span></td>
-				</tr>
-				<tr>
-					<td><span>+</span> Estimated cost of books and &nbsp; &nbsp;&nbsp;supplies</td>
-					<td><span id="s_ebs">$00,000</span></td>
-				</tr>
-				<tr>
-					<td><span>+</span> Estimated other expenses<br />&nbsp;&nbsp;&nbsp;&nbsp;<span>(Personal expenses, transportation, etc.)</span></td>
-					<td><span id="s_eo">$00,000</span></td>
-				</tr>
-			</table>
+			<span class="header">Academic Year: 2015-16</span>
+			<span class="label">Estimated tuition and fees</span>
+			<span id="s_etf">$00,000</span><br />
+			<span>+</span> Estimated room and board charges
+			<div>(Includes rooming accommodations and meals)</div>
+			<span id="s_erb">$00,000</span><br />
+			<span>+</span> Estimated cost of books and &nbsp; &nbsp;&nbsp;supplies
+			<span id="s_ebs">$00,000</span>
+			<span>+</span> Estimated other expenses<br />&nbsp;&nbsp;&nbsp;&nbsp;<span>(Personal expenses, transportation, etc.)</span>
+			<span id="s_eo">$00,000</span>
 
-			<div>
-				<table class="formtable">
-					<tr>
-						<td>Estimated total cost of attendance:</td>
-						<td><span id="s_etpoa">$00,000</span></td>
-					</tr>
-					<tr>
-						<td>
-							<span>-</span>
-							<strong>Estimated total grant aid:</strong>
-							<div>(Includes both merit and need based grant and scholarship aid from Federal, State, or Local Governments, or the Institution)</div>
-						</td>
-						<td><span id="s_etga">$00,000</span></td>
-					</tr>
-				</table>
-			</div>
+			<span class="label">Estimated total cost of attendance:</span>
+			<span id="s_etpoa">$00,000</span>
+			<span>-</span>
+			<strong>Estimated total grant aid:</strong>
+			<div>(Includes both merit and need based grant and scholarship aid from Federal, State, or Local Governments, or the Institution)</div>
+			<span id="s_etga">$00,000</span>
 
-			<div>Estimated Net Price After Grants and Scholarships: <span id="s_enp">$00,000</span></div>
+			<span class="label">Estimated Net Price After Grants and Scholarships: <span id="s_enp">$00,000</span>
 			<br />
 			<span id="s_step6_body"></span>
 
