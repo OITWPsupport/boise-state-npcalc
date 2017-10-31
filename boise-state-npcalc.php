@@ -3,7 +3,7 @@
 Plugin Name: Boise State Net Price Calculator
 Plugin URI: https://github.com/OITWPsupport
 Description: Net Price Calculator code, based on https://nces.ed.gov/ipeds/netpricecalculator/ and customized for Boise State University and to correct a11y errors.
-Version: 0.0.5
+Version: 0.0.6
 Author URI: https://webguide.boisestate.edu/
 */
 
@@ -70,7 +70,7 @@ $str = <<<EOT
 		<div>
 
 		<!-- dv_npc_s0 -->
-		<div id="dv_npc_s0">
+		<div id="dv_npc_s0" class="container">
 			Welcome to Boise State University's Net Price Calculator. Begin by reading and agreeing to the statement below. Then follow the instructions on the subsequent screens to receive an estimate of how much students similar to you paid to attend Boise State University in 2015-16.
 			<br />
 			<br />
