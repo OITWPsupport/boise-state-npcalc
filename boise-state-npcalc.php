@@ -92,43 +92,31 @@ $str = <<<EOT
 		</div>
 
 		<!-- dv_npc_s1 -->
-		<div id="dv_npc_s1" class="hidden">
-			<span>
-				<span class="label">Financial aid:<br /><br /></span>
-				<span>
+		<div id="dv_npc_s1" class="hidden container">
+				<span class="label leftColumn">Financial aid:</span>
+				<span class="rightColumn">
 					Do you plan to apply for financial aid?<br />
 					<span id="s_fa_0"><input type="radio" name="rb_financialaid" value="0" title="Yes, I plan to apply for financial aid." />Yes</span>&nbsp;&nbsp;
 					<span id="s_fa_1"><input type="radio" name="rb_financialaid" value="1" title="No, I do not plan to apply for financial aid." />No</span>
 				</span>
-			</span>
 			<br />
+				<span class="label leftColumn">Age:<br /></span>
+				<span class="rightColumn"><input id="txt_age" type="text" value="" size="6" maxlength="4" title="How old are you?" /></span>
 			<br />
-			<span>
-				<span class="label">Age:<br /></span>
-				<span><input id="txt_age" type="text" value="" size="6" maxlength="4" title="How old are you?" /></span>
-			</span>
-			<br />
-			<br />
-			<span>
-				<span class="label">Living arrangement:<br /><br /><br /><br /><br /></span>
-				<span>
+				<span class="label leftColumn">Living arrangement:</span>
+				<span class="rightColumn">
 					Where do you plan to live while attending this institution?<br />
 					<span id="s_ls_0"><input type="radio" name="rb_livingstatus" value="0" title="On-campus (in a residence hall, dormitory, or on-campus apartment)" />On-campus (in a residence hall, dormitory, or on-campus apartment)</span><br />
 					<span id="s_ls_1"><input type="radio" name="rb_livingstatus" value="1" title="Living on my own or with a roommate" />Living on my own or with a roommate</span><br />
 					<span id="s_ls_2"><input type="radio" name="rb_livingstatus" value="2" title="Living with my parents or other family members" />Living with my parents or other family members</span>
 				</span>
-			</span>
 			<br />
-			<br />
-			<span>
-				<span class="label">Residency:<br /><br /><br /></span>
-				<span>
+				<span class="label leftColumn">Residency:</span>
+				<span class="rightColumn">
 					<span id="s_rs_0"><input type="radio" name="rb_residencystatus" value="##rb_residencystatus_0##" title="Eligible for in-district tuition" />Eligible for in-district tuition<br /></span>
 					<span id="s_rs_1"><input type="radio" name="rb_residencystatus" value="0" title="Eligible for in-state tuition" />Eligible for in-state tuition<br /></span>
 					<span id="s_rs_2"><input type="radio" name="rb_residencystatus" value="1" title="Eligible for out-of-state tuition" />Eligible for out-of-state tuition<br /></span>
 				</span>
-			</span>
-			<br />
 			<br />
 			<span>
 						<a href="javascript:GoPrevious()">Previous</a>
@@ -138,10 +126,9 @@ $str = <<<EOT
 		</div>
 
 		<!-- dv_npc_s2 -->
-		<div id="dv_npc_s2" class="hidden">
-			<span>
-				<span class="label">Marital Status:<br /><br /><br /><br /></span>
-				<span>
+		<div id="dv_npc_s2" class="hidden container">
+				<span class="label leftColumn">Marital Status:<br /><br /><br /><br /></span>
+				<span class="rightColumn">
 					Are you (the student) married?<br />
 					(Answer "yes" if you are separated but not divorced.)<br />
 					<input type="radio" name="rb_maritalstatus" value="1" title="Yes, I am married or separated but not divorced." />Yes<br />
@@ -151,14 +138,12 @@ $str = <<<EOT
 			<br />
 			<br />
 			<span>
-				<span class="label">Children:<br /><br /><br /><br /></span>
-				<span>
+				<span class="label leftColumn">Children:</span>
+				<span class="rightColumn">
 					Are you (the student) the primary source of financial support for any children?<br />
 					<input type="radio" name="rb_numberofchildren" value="1" title="Yes" />Yes<br />
 					<input type="radio" name="rb_numberofchildren" value="0" title="No" />No<br />
 				</span>
-			</span>
-			<br />
 			<br />
 			<span>
 						<a href="javascript:GoPrevious()">Previous</a>
@@ -168,11 +153,10 @@ $str = <<<EOT
 		</div>
 
 		<!-- dv_npc_s3 -->
-		<div id="dv_npc_s3" class="hidden">
-			<span>
-				<span class="label">Number in Family:<br /><br /><br /><br /><br /><br /><br /></span>
-				<span>
-					How many people are in your family's household?</span><br />
+		<div id="dv_npc_s3" class="hidden container">
+				<span class="label leftColumn">Number in Family:</span>
+				<span class="rightColumn">
+					How many people are in your family's household?<br />
 					(Count yourself, your parent(s), and your parents' other dependent children.)<br />
 					<input type="radio" name="rb_numinfamily_dep" id="rb_numinfamily_dep2" value="Two|2" /><label for="rb_numinfamily_dep2">Two</label><br />
 					<input type="radio" name="rb_numinfamily_dep" id="rb_numinfamily_dep3" value="Three|3" /><label for="rb_numinfamily_dep3">Three</label><br />
@@ -180,16 +164,18 @@ $str = <<<EOT
 					<input type="radio" name="rb_numinfamily_dep" id="rb_numinfamily_dep5" value="Five|5" /><label for="rb_numinfamily_dep5">Five</label><br />
 					<input type="radio" name="rb_numinfamily_dep" id="rb_numinfamily_dep6" value="Six or more|6" /><label for="rb_numinfamily_dep6">Six or more</label>
 				</span>
-				<span class="label">Number in College:<br /><br /><br /><br /><br /></span>
-				<span>
+				<br />
+				<span class="label leftColumn">Number in College:</span>
+				<span class="rightColumn">
 					Of the number in your family above, how many will be in college next year?<br />
 					(Count yourself and your siblings; do not count your parents.)
 					<input type="radio" name="rb_numincollege_dep" id="rb_numincollege_dep1" value="One child|1" /><label for="rb_numincollege_dep1">One child</label><br />
 					<input type="radio" name="rb_numincollege_dep" id="rb_numincollege_dep2" value="Two children|2" /><label for="rb_numincollege_dep2">Two children</label><br />
 					<input type="radio" name="rb_numincollege_dep" id="rb_numincollege_dep3" value="Three or more children|3" /><label for="rb_numincollege_dep3">Three or more children</label><br />
 				</span>
-				<span class="label">Household Income:</span><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-				<span>
+				<br />
+				<span class="label leftColumn">Household Income:</span>
+				<span class="rightColumn">
 					What is your annual household income after taxes?<br />
 					<ul>
 						<li>Include income earned by yourself and your parent(s).</li>
@@ -208,16 +194,17 @@ $str = <<<EOT
 					<input type="radio" name="rb_householdincome_dep" value="8" title="Between Above $99,999" />Above $99,999<br />
 				</span>
 				<br />
-				<a href="javascript:GoPrevious()">Previous</a>
-				&nbsp;&nbsp;
-				<a href="javascript:GoNext()">Continue</a>
-			</span>
+				<span>
+					<a href="javascript:GoPrevious()">Previous</a>
+					&nbsp;&nbsp;
+					<a href="javascript:GoNext()">Continue</a>
+				</span>
 		</div>
 
 		<!-- dv_npc_s4 -->
-		<div id="dv_npc_s4" class="hidden">
-			<span class="label">Number in Family:</span><br /><br /><br />
-			<span>
+		<div id="dv_npc_s4" class="hidden container">
+			<span class="label leftColumn">Number in Family:</span>
+			<span class="rightColumn">
 				How many people are in your family's household?<br />
 				Count yourself and your spouse (if applicable).<br />
 				Count yourself, your spouse (if applicable), and any dependent children.<br />
@@ -232,18 +219,19 @@ $str = <<<EOT
 					<input type="radio" name="rb_indnuminfamily" value="Six or more|6" title="Six or more" />Six or more
 				</div>
 			</span>
-			<span class="label">Number in College:</span><br /><br /><br /><br />
-			<span>
+			<br />
+			<span class="label leftColumn">Number in College:</span>
+			<span class="rightColumn">
 				Of the number in your family above, how many will be in college next year?<br />
 				<input type="radio" name="rb_indnumincollege" value="One|1" title="One" />One<br />
 				<span id="spanIndNumInCollegeTwoOrMore" class="hidden"><input type="radio" name="rb_indnumincollege" value="Two or more|2" title="Two or more" />Two or more<br /></span>
 				<span id="spanIndNumInCollegeTwo" class="hidden"><input type="radio" name="rb_indnumincollege" value="Two|2" title="Two" />Two<br /></span>
 			</span>
-
-			<span class="label">Household Income:</span><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-			<span>
+			<br />
+			<span class="label leftColumn">Household Income:</span>
+			<span class="rightColumn">
 				What is your annual household income after taxes?<br />
-				(Include income from work, child support, and other sources; if you are married, include your spouse's income.)</span><br />
+				(Include income from work, child support, and other sources; if you are married, include your spouse's income.)<br />
 				<input type="radio" name="rb_householdincome_ind" value="0" title="Less than $30,000" />Less than $30,000<br />
 				<input type="radio" name="rb_householdincome_ind" value="1" title="Between $30,000 and $39,999" />Between $30,000 - $39,999<br />
 				<input type="radio" name="rb_householdincome_ind" value="2" title="Between $40,000 and $49,999" />Between $40,000 - $49,999<br />
@@ -253,7 +241,9 @@ $str = <<<EOT
 				<input type="radio" name="rb_householdincome_ind" value="6" title="Between $80,000 and $89,999" />Between $80,000 - $89,999<br />
 				<input type="radio" name="rb_householdincome_ind" value="7" title="Between $90,000 and $99,999" />Between $90,000 - $99,999<br />
 				<input type="radio" name="rb_householdincome_ind" value="8" title="Above $99,999" />Above $99,999<br />
-
+			</span>
+			<br />
+			<span>
 						<a href="javascript:GoPrevious()">Previous</a>
 						&nbsp;&nbsp;
 						<a href="javascript:GoNext()">Continue</a>
@@ -269,38 +259,74 @@ $str = <<<EOT
 		</div>
 
 		<!-- dv_npc_s6 -->
-		<div id="dv_npc_s6" class="hidden">
+		<div id="dv_npc_s6" class="hidden container">
 
-			<span class="header">Academic Year: 2015-16</span>
-			<span class="label">Estimated tuition and fees</span>
-			<span id="s_etf">$00,000</span><br />
-			<span>+</span> Estimated room and board charges
-			<div>(Includes rooming accommodations and meals)</div>
-			<span id="s_erb">$00,000</span><br />
-			<span>+</span> Estimated cost of books and &nbsp; &nbsp;&nbsp;supplies
-			<span id="s_ebs">$00,000</span>
-			<span>+</span> Estimated other expenses<br />&nbsp;&nbsp;&nbsp;&nbsp;<span>(Personal expenses, transportation, etc.)</span>
-			<span id="s_eo">$00,000</span>
+			<span class="header">Academic Year: 2015-16</span><br />
 
-			<span class="label">Estimated total cost of attendance:</span>
-			<span id="s_etpoa">$00,000</span>
-			<span>-</span>
-			<strong>Estimated total grant aid:</strong>
-			<div>(Includes both merit and need based grant and scholarship aid from Federal, State, or Local Governments, or the Institution)</div>
-			<span id="s_etga">$00,000</span>
-
-			<span class="label">Estimated Net Price After Grants and Scholarships: <span id="s_enp">$00,000</span>
+			<div class="shaded">
+				<span class="label leftColumn">Estimated tuition and fees</span>
+				<span id="s_etf" class="rightColumn">$00,000</span>
+			</div>
 			<br />
-			<span id="s_step6_body"></span>
+
+			<div class="shaded">
+				<span class="label leftColumn">
+					+ Estimated room and board charges<br />
+					<span class="disclaimer">(Includes rooming accommodations and meals)</span>
+				</span>
+				<span id="s_erb" class="rightColumn">$00,000</span>
+			</div>
+			<br />
+			<div class="shaded">
+				<span class="label leftColumn">+ Estimated cost of books and supplies</span>
+				<span id="s_ebs" class="rightColumn">$00,000</span>
+			</div>
+			<br />
+
+			<div class="shaded">
+				<span class="label leftColumn">
+					+ Estimated other expenses<br />
+					<span class="disclaimer">(Personal expenses, transportation, etc.)</span>
+				</span>
+				<span id="s_eo" class="rightColumn">$00,000</span>
+			</div>
+			<br />
+
+			<div class="shaded">
+				<span class="label leftColumn">Estimated total cost of attendance:</span>
+				<span id="s_etpoa" class="rightColumn">$00,000</span>
+			</div>
+			<br />
+
+			<div class="shaded">
+				<span class="label leftColumn">
+					- Estimated total grant aid:<br />
+					<span class="disclaimer">(Includes merit and need based grant and scholarship aid from Federal, State, or Local Governments, or the Institution)</span>
+				</span>
+				<span id="s_etga" class="rightColumn">$00,000</span>
+			</div>
+			<br />
+			<br />
+			<br /><br />
+
+			<div class="shaded">
+				<span class="label leftColumn">Estimated Net Price After Grants and Scholarships:</span>
+				<span id="s_enp" class="rightColumn">$00,000</span>
+			</div>
+			<br />
+
+			<span id="s_step6_body"></span><br />
 
 			<div id="tr_requiredliveoncampus">
 				This institution requires that full-time, first-time students live on-campus or in institutionally controlled housing.
 			</div>
+			<br />
 
 			<div>
 				Grants and scholarships do not have to be repaid. Some students also qualify for student loans to assist in paying this net price; however, student loans do have to be repaid.
 			</div>
-		</div>
+			<br />
+		</div>	
 	
 	</div>
 

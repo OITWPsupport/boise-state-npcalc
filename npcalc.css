@@ -146,4 +146,26 @@ body {
 #tr_requiredliveoncampus {
 	display: none;
 }
+	.leftColumn {
+		margin: 0px;
+		display: inline-block;
+		border: 0px solid black;
+		vertical-align: top;
+		width: 300px;
+	}
+	
+	.rightColumn {
+		margin: 0px;
+		display: inline-block;
+		border: 0px solid green;
+		vertical-align: top;
+	}
+.container {
+	width: 800px;
+	height: 1000px;
+}
+
+.shaded {
+	background-color: #E0E0E0;
+}
 	</style>
