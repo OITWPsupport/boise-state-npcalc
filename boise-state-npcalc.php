@@ -3,7 +3,7 @@
 Plugin Name: Boise State Net Price Calculator
 Plugin URI: https://github.com/OITWPsupport
 Description: Net Price Calculator code, based on https://nces.ed.gov/ipeds/netpricecalculator/ and customized for Boise State University and to correct a11y errors.
-Version: 0.0.7
+Version: 0.0.8
 Author URI: https://webguide.boisestate.edu/
 */
 
@@ -231,7 +231,7 @@ $str = <<<EOT
 			<span class="label leftColumn">Household Income:</span>
 			<span class="rightColumn">
 				What is your annual household income after taxes?<br />
-				(Include income from work, child support, and other sources; if you are married, include your spouse's income.)<br />
+				(Include income from work, child support, and other sources;<br />if you are married, include your spouse's income.)<br />
 				<input type="radio" name="rb_householdincome_ind" value="0" title="Less than $30,000" />Less than $30,000<br />
 				<input type="radio" name="rb_householdincome_ind" value="1" title="Between $30,000 and $39,999" />Between $30,000 - $39,999<br />
 				<input type="radio" name="rb_householdincome_ind" value="2" title="Between $40,000 and $49,999" />Between $40,000 - $49,999<br />
@@ -264,13 +264,13 @@ $str = <<<EOT
 			<span class="header">Academic Year: 2015-16</span><br />
 
 			<div class="shaded">
-				<span class="label leftColumn">Estimated tuition and fees</span>
+				<span class="label leftColumnSummaryPage">Estimated tuition and fees</span>
 				<span id="s_etf" class="rightColumn">$00,000</span>
 			</div>
 			<br />
 
 			<div class="shaded">
-				<span class="label leftColumn">
+				<span class="label leftColumnSummaryPage">
 					+ Estimated room and board charges<br />
 					<span class="disclaimer">(Includes rooming accommodations and meals)</span>
 				</span>
@@ -278,13 +278,13 @@ $str = <<<EOT
 			</div>
 			<br />
 			<div class="shaded">
-				<span class="label leftColumn">+ Estimated cost of books and supplies</span>
+				<span class="label leftColumnSummaryPage">+ Estimated cost of books and supplies</span>
 				<span id="s_ebs" class="rightColumn">$00,000</span>
 			</div>
 			<br />
 
 			<div class="shaded">
-				<span class="label leftColumn">
+				<span class="label leftColumnSummaryPage">
 					+ Estimated other expenses<br />
 					<span class="disclaimer">(Personal expenses, transportation, etc.)</span>
 				</span>
@@ -293,13 +293,13 @@ $str = <<<EOT
 			<br />
 
 			<div class="shaded">
-				<span class="label leftColumn">Estimated total cost of attendance:</span>
+				<span class="label leftColumnSummaryPage">Estimated total cost of attendance:</span>
 				<span id="s_etpoa" class="rightColumn">$00,000</span>
 			</div>
 			<br />
 
 			<div class="shaded">
-				<span class="label leftColumn">
+				<span class="label leftColumnSummaryPage">
 					- Estimated total grant aid:<br />
 					<span class="disclaimer">(Includes merit and need based grant and scholarship aid from Federal, State, or Local Governments, or the Institution)</span>
 				</span>
@@ -310,7 +310,7 @@ $str = <<<EOT
 			<br /><br />
 
 			<div class="shaded">
-				<span class="label leftColumn">Estimated Net Price After Grants and Scholarships:</span>
+				<span class="label leftColumnSummaryPage">Estimated Net Price After Grants and Scholarships:</span>
 				<span id="s_enp" class="rightColumn">$00,000</span>
 			</div>
 			<br />

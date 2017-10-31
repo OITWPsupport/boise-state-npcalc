@@ -151,7 +151,7 @@ body {
 		display: inline-block;
 		border: 0px solid black;
 		vertical-align: top;
-		width: 400px;
+		width: 175px;
 	}
 	
 	.rightColumn {
@@ -159,6 +159,14 @@ body {
 		display: inline-block;
 		border: 0px solid green;
 		vertical-align: top;
+	}
+	
+	.leftColumnSummaryPage {
+		margin: 0px;
+		display: inline-block;
+		border: 0px solid black;
+		vertical-align: top;
+		width: 400px;
 	}
 .container {
 
