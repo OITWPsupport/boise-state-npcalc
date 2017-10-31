@@ -151,7 +151,7 @@ body {
 		display: inline-block;
 		border: 0px solid black;
 		vertical-align: top;
-		width: 300px;
+		width: 400px;
 	}
 	
 	.rightColumn {
@@ -161,8 +161,7 @@ body {
 		vertical-align: top;
 	}
 .container {
-	width: 660px;
-	height: 1000px;
+
 }
 
 .shaded {
