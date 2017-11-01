@@ -70,7 +70,7 @@ $str = <<<EOT
 		<div>
 
 		<!-- dv_npc_s0 -->
-		<div id="dv_npc_s0" class="container">
+		<div id="dv_npc_s0" class="myContainer">
 			Welcome to Boise State University's Net Price Calculator. Begin by reading and agreeing to the statement below. Then follow the instructions on the subsequent screens to receive an estimate of how much students similar to you paid to attend Boise State University in 2015-16.
 			<br />
 			<br />
@@ -92,7 +92,7 @@ $str = <<<EOT
 		</div>
 
 		<!-- dv_npc_s1 -->
-		<div id="dv_npc_s1" class="hidden container">
+		<div id="dv_npc_s1" class="hidden myContainer">
 				<span class="label leftColumn">Financial aid:</span>
 				<span class="rightColumn">
 					Do you plan to apply for financial aid?<br />
@@ -106,7 +106,7 @@ $str = <<<EOT
 				<span class="label leftColumn">Living arrangement:</span>
 				<span class="rightColumn">
 					Where do you plan to live while attending this institution?<br />
-					<span id="s_ls_0"><input type="radio" name="rb_livingstatus" value="0" title="On-campus (in a residence hall, dormitory, or on-campus apartment)" />On-campus (in a residence hall, dormitory, or on-campus apartment)</span><br />
+					<span id="s_ls_0"><input type="radio" name="rb_livingstatus" value="0" title="On-campus (residence hall, dormitory or on-campus apartment)" />On-campus (in a residence hall, dormitory, or on-campus apartment)</span><br />
 					<span id="s_ls_1"><input type="radio" name="rb_livingstatus" value="1" title="Living on my own or with a roommate" />Living on my own or with a roommate</span><br />
 					<span id="s_ls_2"><input type="radio" name="rb_livingstatus" value="2" title="Living with my parents or other family members" />Living with my parents or other family members</span>
 				</span>
@@ -126,7 +126,7 @@ $str = <<<EOT
 		</div>
 
 		<!-- dv_npc_s2 -->
-		<div id="dv_npc_s2" class="hidden container">
+		<div id="dv_npc_s2" class="hidden myContainer">
 				<span class="label leftColumn">Marital Status:<br /><br /><br /><br /></span>
 				<span class="rightColumn">
 					Are you (the student) married?<br />
@@ -140,7 +140,7 @@ $str = <<<EOT
 			<span>
 				<span class="label leftColumn">Children:</span>
 				<span class="rightColumn">
-					Are you (the student) the primary source of financial support for any children?<br />
+					Are you (the student) the primary source of financial support<br />for any children?<br />
 					<input type="radio" name="rb_numberofchildren" value="1" title="Yes" />Yes<br />
 					<input type="radio" name="rb_numberofchildren" value="0" title="No" />No<br />
 				</span>
@@ -153,7 +153,7 @@ $str = <<<EOT
 		</div>
 
 		<!-- dv_npc_s3 -->
-		<div id="dv_npc_s3" class="hidden container">
+		<div id="dv_npc_s3" class="hidden myContainer">
 				<span class="label leftColumn">Number in Family:</span>
 				<span class="rightColumn">
 					How many people are in your family's household?<br />
@@ -167,7 +167,7 @@ $str = <<<EOT
 				<br />
 				<span class="label leftColumn">Number in College:</span>
 				<span class="rightColumn">
-					Of the number in your family above, how many will be in college next year?<br />
+					Of the number in your family above, how many will be in college<br />next year?<br />
 					(Count yourself and your siblings; do not count your parents.)
 					<input type="radio" name="rb_numincollege_dep" id="rb_numincollege_dep1" value="One child|1" /><label for="rb_numincollege_dep1">One child</label><br />
 					<input type="radio" name="rb_numincollege_dep" id="rb_numincollege_dep2" value="Two children|2" /><label for="rb_numincollege_dep2">Two children</label><br />
@@ -202,7 +202,7 @@ $str = <<<EOT
 		</div>
 
 		<!-- dv_npc_s4 -->
-		<div id="dv_npc_s4" class="hidden container">
+		<div id="dv_npc_s4" class="hidden myContainer">
 			<span class="label leftColumn">Number in Family:</span>
 			<span class="rightColumn">
 				How many people are in your family's household?<br />
@@ -222,7 +222,7 @@ $str = <<<EOT
 			<br />
 			<span class="label leftColumn">Number in College:</span>
 			<span class="rightColumn">
-				Of the number in your family above, how many will be in college next year?<br />
+				Of the number in your family above, how many will be in college<br />next year?<br />
 				<input type="radio" name="rb_indnumincollege" value="One|1" title="One" />One<br />
 				<span id="spanIndNumInCollegeTwoOrMore" class="hidden"><input type="radio" name="rb_indnumincollege" value="Two or more|2" title="Two or more" />Two or more<br /></span>
 				<span id="spanIndNumInCollegeTwo" class="hidden"><input type="radio" name="rb_indnumincollege" value="Two|2" title="Two" />Two<br /></span>
@@ -259,7 +259,7 @@ $str = <<<EOT
 		</div>
 
 		<!-- dv_npc_s6 -->
-		<div id="dv_npc_s6" class="hidden container">
+		<div id="dv_npc_s6" class="hidden myContainer">
 
 			<span class="header">Academic Year: 2015-16</span><br />
 
@@ -301,7 +301,7 @@ $str = <<<EOT
 			<div class="shaded">
 				<span class="label leftColumnSummaryPage">
 					- Estimated total grant aid:<br />
-					<span class="disclaimer">(Includes merit and need based grant and scholarship aid from Federal, State, or Local Governments, or the Institution)</span>
+					<span class="disclaimer">(Includes merit and need based grant and scholarship aid<br />from Federal, State, or Local Governments, or the Institution)</span>
 				</span>
 				<span id="s_etga" class="rightColumn">$00,000</span>
 			</div>
