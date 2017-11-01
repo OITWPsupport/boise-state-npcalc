@@ -1,59 +1,30 @@
-	<style type="text/css">
-		body {
-			font-family: Helvetica Neue;
-			font-size: 13px;
-		}
-
-		input {
-			font-family: Helvetica;
-			font-size: 13px;
-		}
-
-div {
-	font-family: Helvetica Neue;
-	font-size: 13px;
-}
-
-span {
-	font-family: Helvetica Neue;
-	font-size: 13px;
-}
-
-h1 {
-	font-family: Oswald;
-	font-weight: normal;
-	font-size: 22px;
-	color: #09347a;
-
-}
-
-.myHeader {
+<style type="text/css">
+.npcalcHeader {
 	font-weight:bold;
 	color:#cc6600;
 	font-size:14px;
 }
 
-.label {
+.npcalcLabel {
 	float: left;
 	width:170px;
 	font-weight:bold;
 }
 
-.hidden {
+.npcalcHidden {
 	display:none;
 }
 
-		.disclaimer {
-			margin-top: 0px;
-			margin-right: 8px;
-			margin-bottom: 20px;
-			width: 480px;
-			font-family: Arial;
-			font-weight: normal;
-			font-size: 11px;
-			text-align: left;
-		}
-
+.npcalcDisclaimer {
+	margin-top: 0px;
+	margin-right: 8px;
+	margin-bottom: 20px;
+	width: 480px;
+	font-family: Arial;
+	font-weight: normal;
+	font-size: 11px;
+	text-align: left;
+}
 
 #dv_npc_s1_t {
 	display: none;
@@ -94,33 +65,34 @@ h1 {
 #tr_requiredliveoncampus {
 	display: none;
 }
-	.leftColumn {
-		margin: 0px;
-		display: inline-block;
-		border: 0px solid black;
-		vertical-align: top;
-		width: 175px;
-	}
-	
-	.rightColumn {
-		margin: 0px;
-		display: inline-block;
-		border: 0px solid green;
-		vertical-align: top;
-	}
-	
-	.leftColumnSummaryPage {
-		margin: 0px;
-		display: inline-block;
-		border: 0px solid black;
-		vertical-align: top;
-		width: 400px;
-	}
-.myContainer {
+
+.npcalcLeftColumn {
+	margin: 0px;
+	display: inline-block;
+	border: 0px solid black;
+	vertical-align: top;
+	width: 175px;
+}
+
+.npcalcRightColumn {
+	margin: 0px;
+	display: inline-block;
+	border: 0px solid green;
+	vertical-align: top;
+}
+
+.npcalcLeftColumnSummaryPage {
+	margin: 0px;
+	display: inline-block;
+	border: 0px solid black;
+	vertical-align: top;
+	width: 400px;
+}
+.npcalcContainer {
 
 }
 
-.shaded {
+.npcalcShaded {
 	background-color: #E0E0E0;
 }
-	</style>
+</style>

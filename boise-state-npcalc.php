@@ -3,7 +3,7 @@
 Plugin Name: Boise State Net Price Calculator
 Plugin URI: https://github.com/OITWPsupport
 Description: Net Price Calculator code, based on https://nces.ed.gov/ipeds/netpricecalculator/ and customized for Boise State University and to correct a11y errors.
-Version: 0.0.10
+Version: 0.0.11
 Author URI: https://webguide.boisestate.edu/
 */
 
@@ -70,7 +70,7 @@ $str = <<<EOT
 		<div>
 
 		<!-- dv_npc_s0 -->
-		<div id="dv_npc_s0" class="myContainer">
+		<div id="dv_npc_s0" class="npcalcContainer">
 			Welcome to Boise State University's Net Price Calculator. Begin by reading and agreeing to the statement below. Then follow the instructions on the subsequent screens to receive an estimate of how much students similar to you paid to attend Boise State University in 2015-16.
 			<br />
 			<br />
@@ -92,27 +92,27 @@ $str = <<<EOT
 		</div>
 
 		<!-- dv_npc_s1 -->
-		<div id="dv_npc_s1" class="hidden myContainer">
-				<span class="label leftColumn">Financial aid:</span>
-				<span class="rightColumn">
+		<div id="dv_npc_s1" class="npcalcHidden npcalcContainer">
+				<span class="npcalcLabel npcalcLeftColumn">Financial aid:</span>
+				<span class="npcalcRightColumn">
 					Do you plan to apply for financial aid?<br />
 					<span id="s_fa_0"><input type="radio" name="rb_financialaid" value="0" title="Yes, I plan to apply for financial aid." />Yes</span>&nbsp;&nbsp;
 					<span id="s_fa_1"><input type="radio" name="rb_financialaid" value="1" title="No, I do not plan to apply for financial aid." />No</span>
 				</span>
 			<br />
-				<span class="label leftColumn">Age:<br /></span>
-				<span class="rightColumn"><input id="txt_age" type="text" value="" size="6" maxlength="4" title="How old are you?" /></span>
+				<span class="npcalcLabel npcalcLeftColumn">Age:<br /></span>
+				<span class="npcalcRightColumn"><input id="txt_age" type="text" value="" size="6" maxlength="4" title="How old are you?" /></span>
 			<br />
-				<span class="label leftColumn">Living arrangement:</span>
-				<span class="rightColumn">
+				<span class="npcalcLabel npcalcLeftColumn">Living arrangement:</span>
+				<span class="npcalcRightColumn">
 					Where do you plan to live while attending this institution?<br />
 					<span id="s_ls_0"><input type="radio" name="rb_livingstatus" value="0" title="On-campus (residence hall, dormitory or on-campus apartment)" />On-campus (in a residence hall, dormitory, or on-campus apartment)</span><br />
 					<span id="s_ls_1"><input type="radio" name="rb_livingstatus" value="1" title="Living on my own or with a roommate" />Living on my own or with a roommate</span><br />
 					<span id="s_ls_2"><input type="radio" name="rb_livingstatus" value="2" title="Living with my parents or other family members" />Living with my parents or other family members</span>
 				</span>
 			<br />
-				<span class="label leftColumn">Residency:</span>
-				<span class="rightColumn">
+				<span class="npcalcLabel npcalcLeftColumn">Residency:</span>
+				<span class="npcalcRightColumn">
 					<span id="s_rs_0"><input type="radio" name="rb_residencystatus" value="##rb_residencystatus_0##" title="Eligible for in-district tuition" />Eligible for in-district tuition<br /></span>
 					<span id="s_rs_1"><input type="radio" name="rb_residencystatus" value="0" title="Eligible for in-state tuition" />Eligible for in-state tuition<br /></span>
 					<span id="s_rs_2"><input type="radio" name="rb_residencystatus" value="1" title="Eligible for out-of-state tuition" />Eligible for out-of-state tuition<br /></span>
@@ -126,7 +126,7 @@ $str = <<<EOT
 		</div>
 
 		<!-- dv_npc_s2 -->
-		<div id="dv_npc_s2" class="hidden myContainer">
+		<div id="dv_npc_s2" class="npcalcHidden npcalcContainer">
 				<span class="label leftColumn">Marital Status:<br /><br /><br /><br /></span>
 				<span class="rightColumn">
 					Are you (the student) married?<br />
@@ -153,9 +153,9 @@ $str = <<<EOT
 		</div>
 
 		<!-- dv_npc_s3 -->
-		<div id="dv_npc_s3" class="hidden myContainer">
-				<span class="label leftColumn">Number in Family:</span>
-				<span class="rightColumn">
+		<div id="dv_npc_s3" class="npcalcHidden npcalcContainer">
+				<span class="npcalcLabel npcalcLeftColumn">Number in Family:</span>
+				<span class="npcalcRightColumn">
 					How many people are in your family's household?<br />
 					(Count yourself, your parent(s), and your parents' other dependent children.)<br />
 					<input type="radio" name="rb_numinfamily_dep" id="rb_numinfamily_dep2" value="Two|2" /><label for="rb_numinfamily_dep2">Two</label><br />
@@ -165,8 +165,8 @@ $str = <<<EOT
 					<input type="radio" name="rb_numinfamily_dep" id="rb_numinfamily_dep6" value="Six or more|6" /><label for="rb_numinfamily_dep6">Six or more</label>
 				</span>
 				<br />
-				<span class="label leftColumn">Number in College:</span>
-				<span class="rightColumn">
+				<span class="npcalcLabel npcalcLeftColumn">Number in College:</span>
+				<span class="npcalcRightColumn">
 					Of the number in your family above, how many will be in college<br />next year?<br />
 					(Count yourself and your siblings; do not count your parents.)
 					<input type="radio" name="rb_numincollege_dep" id="rb_numincollege_dep1" value="One child|1" /><label for="rb_numincollege_dep1">One child</label><br />
@@ -174,8 +174,8 @@ $str = <<<EOT
 					<input type="radio" name="rb_numincollege_dep" id="rb_numincollege_dep3" value="Three or more children|3" /><label for="rb_numincollege_dep3">Three or more children</label><br />
 				</span>
 				<br />
-				<span class="label leftColumn">Household Income:</span>
-				<span class="rightColumn">
+				<span class="npcalcLabel npcalcLeftColumn">Household Income:</span>
+				<span class="npcalcRightColumn">
 					What is your annual household income after taxes?<br />
 					<ul>
 						<li>Include income earned by yourself and your parent(s).</li>
@@ -202,17 +202,17 @@ $str = <<<EOT
 		</div>
 
 		<!-- dv_npc_s4 -->
-		<div id="dv_npc_s4" class="hidden myContainer">
-			<span class="label leftColumn">Number in Family:</span>
-			<span class="rightColumn">
+		<div id="dv_npc_s4" class="npcalcHidden npcalcContainer">
+			<span class="npcalcLabel npcalcLeftColumn">Number in Family:</span>
+			<span class="npcalcRightColumn">
 				How many people are in your family's household?<br />
 				Count yourself and your spouse (if applicable).<br />
 				Count yourself, your spouse (if applicable), and any dependent children.<br />
-				<div id="divFirstOptionForNumInFamilyWithChildren" class="hidden">
+				<div id="divFirstOptionForNumInFamilyWithChildren" class="npcalcHidden">
 					<input type="radio" name="rb_indnuminfamily" value="One|1" title="One" />One<br />
 				</div>
 				<input type="radio" name="rb_indnuminfamily" value="Two|2" title="Two" />Two<br />
-				<div id="divNumInFamilyWithChildren" class="hidden">
+				<div id="divNumInFamilyWithChildren" class="npcalcHidden">
 					<input type="radio" name="rb_indnuminfamily" value="Three|3" title="Three" />Three<br />
 					<input type="radio" name="rb_indnuminfamily" value="Four|4" title="Four" />Four<br />
 					<input type="radio" name="rb_indnuminfamily" value="Five|5" title="Five" />Five<br />
@@ -220,16 +220,16 @@ $str = <<<EOT
 				</div>
 			</span>
 			<br />
-			<span class="label leftColumn">Number in College:</span>
-			<span class="rightColumn">
+			<span class="npcalcLabel npcalcLeftColumn">Number in College:</span>
+			<span class="npcalcRightColumn">
 				Of the number in your family above, how many will be in college<br />next year?<br />
 				<input type="radio" name="rb_indnumincollege" value="One|1" title="One" />One<br />
-				<span id="spanIndNumInCollegeTwoOrMore" class="hidden"><input type="radio" name="rb_indnumincollege" value="Two or more|2" title="Two or more" />Two or more<br /></span>
-				<span id="spanIndNumInCollegeTwo" class="hidden"><input type="radio" name="rb_indnumincollege" value="Two|2" title="Two" />Two<br /></span>
+				<span id="spanIndNumInCollegeTwoOrMore" class="npcalcHidden"><input type="radio" name="rb_indnumincollege" value="Two or more|2" title="Two or more" />Two or more<br /></span>
+				<span id="spanIndNumInCollegeTwo" class="npcalcHidden"><input type="radio" name="rb_indnumincollege" value="Two|2" title="Two" />Two<br /></span>
 			</span>
 			<br />
-			<span class="label leftColumn">Household Income:</span>
-			<span class="rightColumn">
+			<span class="npcalcLabel npcalcLeftColumn">Household Income:</span>
+			<span class="npcalcRightColumn">
 				What is your annual household income after taxes?<br />
 				(Include income from work, child support, and other sources;<br />if you are married, include your spouse's income.)<br />
 				<input type="radio" name="rb_householdincome_ind" value="0" title="Less than $30,000" />Less than $30,000<br />
@@ -251,7 +251,7 @@ $str = <<<EOT
 		</div>
 
 		<!-- div with summary data -->
-		<div id="dv_npc_s5" class="hidden">
+		<div id="dv_npc_s5" class="npcalcHidden">
 				<div id="dv_summary"></div>
 				<a href="javascript:ClearVars();GoTo('1');">Modify</a>
 				&nbsp;&nbsp;
@@ -259,59 +259,59 @@ $str = <<<EOT
 		</div>
 
 		<!-- dv_npc_s6 -->
-		<div id="dv_npc_s6" class="hidden myContainer">
+		<div id="dv_npc_s6" class="npcalcHidden npcalcContainer">
 
-			<span class="myHeader">Academic Year: 2015-16</span><br />
+			<span class="npcalcHeader">Academic Year: 2015-16</span><br />
 
-			<div class="shaded">
-				<span class="label leftColumnSummaryPage">Estimated tuition and fees</span>
-				<span id="s_etf" class="rightColumn">$00,000</span>
+			<div class="npcalcShaded">
+				<span class="npcalcLabel npcalcLeftColumnSummaryPage">Estimated tuition and fees</span>
+				<span id="s_etf" class="npcalcRightColumn">$00,000</span>
 			</div>
 			<br />
 
-			<div class="shaded">
-				<span class="label leftColumnSummaryPage">
+			<div class="npcalcShaded">
+				<span class="npcalcLabel npcalcLeftColumnSummaryPage">
 					+ Estimated room and board charges<br />
-					<span class="disclaimer">(Includes rooming accommodations and meals)</span>
+					<span class="npcalcDisclaimer">(Includes rooming accommodations and meals)</span>
 				</span>
-				<span id="s_erb" class="rightColumn">$00,000</span>
+				<span id="s_erb" class="npcalcRightColumn">$00,000</span>
 			</div>
 			<br />
-			<div class="shaded">
-				<span class="label leftColumnSummaryPage">+ Estimated cost of books and supplies</span>
-				<span id="s_ebs" class="rightColumn">$00,000</span>
+			<div class="npcalcShaded">
+				<span class="npcalcLabel npcalcLeftColumnSummaryPage">+ Estimated cost of books and supplies</span>
+				<span id="s_ebs" class="npcalcRightColumn">$00,000</span>
 			</div>
 			<br />
 
-			<div class="shaded">
-				<span class="label leftColumnSummaryPage">
+			<div class="npcalcShaded">
+				<span class="npcalcLabel npcalcLeftColumnSummaryPage">
 					+ Estimated other expenses<br />
-					<span class="disclaimer">(Personal expenses, transportation, etc.)</span>
+					<span class="npcalcDisclaimer">(Personal expenses, transportation, etc.)</span>
 				</span>
-				<span id="s_eo" class="rightColumn">$00,000</span>
+				<span id="s_eo" class="npcalcRightColumn">$00,000</span>
 			</div>
 			<br />
 
-			<div class="shaded">
-				<span class="label leftColumnSummaryPage">Estimated total cost of attendance:</span>
-				<span id="s_etpoa" class="rightColumn">$00,000</span>
+			<div class="npcalcShaded">
+				<span class="npcalcLabel npcalcLeftColumnSummaryPage">Estimated total cost of attendance:</span>
+				<span id="s_etpoa" class="npcalcRightColumn">$00,000</span>
 			</div>
 			<br />
 
-			<div class="shaded">
-				<span class="label leftColumnSummaryPage">
+			<div class="npcalcShaded">
+				<span class="npcalcLabel npcalcLeftColumnSummaryPage">
 					- Estimated total grant aid:<br />
-					<span class="disclaimer">(Includes merit and need based grant and scholarship aid<br />from Federal, State, or Local Governments, or the Institution)</span>
+					<span class="npcalcDisclaimer">(Includes merit and need based grant and scholarship aid<br />from Federal, State, or Local Governments, or the Institution)</span>
 				</span>
-				<span id="s_etga" class="rightColumn">$00,000</span>
+				<span id="s_etga" class="npcalcRightColumn">$00,000</span>
 			</div>
 			<br />
 			<br />
 			<br /><br />
 
-			<div class="shaded">
-				<span class="label leftColumnSummaryPage">Estimated Net Price After Grants and Scholarships:</span>
-				<span id="s_enp" class="rightColumn">$00,000</span>
+			<div class="npcalcShaded">
+				<span class="npcalcLabel npcalcLeftColumnSummaryPage">Estimated Net Price After Grants and Scholarships:</span>
+				<span id="s_enp" class="npcalcRightColumn">$00,000</span>
 			</div>
 			<br />
 
@@ -333,7 +333,7 @@ $str = <<<EOT
 
 
 
-	<div id="dv_npc_s6_r" class="disclaimer hidden">
+	<div id="dv_npc_s6_r" class="npcalcDisclaimer npcalcHidden">
 		<a href="javascript:GoPrevious()">Previous</a>
 		&nbsp;&nbsp;
 		<a href="javascript:StartOver();">Start Over</a>
