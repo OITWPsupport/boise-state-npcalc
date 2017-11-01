@@ -525,7 +525,7 @@ TGA_NFAFSA = ['0','0','0','0','0','0'];
 				if ((divWithContent && stepTitle && stepnumber) || (divWithContent && stepid=="0")) {
 					// Handle Step Number
 					if (stepid == "0") {                      // Going Back to Step #0
-						openInstitutionNameWindow();
+						// openInstitutionNameWindow();
 						npc_step = "0";
 					}
 					else if (stepid * 1 > currentstepid) {    // next
