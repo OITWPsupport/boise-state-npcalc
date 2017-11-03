@@ -127,8 +127,8 @@ $str = <<<EOT
 
 		<!-- dv_npc_s2 -->
 		<div id="dv_npc_s2" class="npcalcHidden npcalcContainer">
-				<span class="label leftColumn">Marital Status:<br /><br /><br /><br /></span>
-				<span class="rightColumn">
+				<span class="npcalcLabel npcalcLeftColumn">Marital Status:<br /><br /><br /><br /></span>
+				<span class="npcalcRightColumn">
 					Are you (the student) married?<br />
 					(Answer "yes" if you are separated but not divorced.)<br />
 					<input type="radio" name="rb_maritalstatus" value="1" title="Yes, I am married or separated but not divorced." />Yes<br />
@@ -138,8 +138,8 @@ $str = <<<EOT
 			<br />
 			<br />
 			<span>
-				<span class="label leftColumn">Children:</span>
-				<span class="rightColumn">
+				<span class="npcalcLabel npcalcLeftColumn">Children:</span>
+				<span class="npcalcRightColumn">
 					Are you (the student) the primary source of financial support<br />for any children?<br />
 					<input type="radio" name="rb_numberofchildren" value="1" title="Yes" />Yes<br />
 					<input type="radio" name="rb_numberofchildren" value="0" title="No" />No<br />
@@ -206,8 +206,8 @@ $str = <<<EOT
 			<span class="npcalcLabel npcalcLeftColumn">Number in Family:</span>
 			<span class="npcalcRightColumn">
 				How many people are in your family's household?<br />
-				Count yourself and your spouse (if applicable).<br />
-				Count yourself, your spouse (if applicable), and any dependent children.<br />
+				<span id="spanNumInFamilyHint" class="npcalcHidden">Count yourself and your spouse (if applicable).<br /></span>
+				<span id="spanNumInFamilyHintWithChildren" class="npcalcHidden">Count yourself, your spouse (if applicable), and any dependent children.<br /></span>
 				<div id="divFirstOptionForNumInFamilyWithChildren" class="npcalcHidden">
 					<input type="radio" name="rb_indnuminfamily" value="One|1" title="One" />One<br />
 				</div>
