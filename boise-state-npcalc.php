@@ -3,7 +3,7 @@
 Plugin Name: Boise State Net Price Calculator
 Plugin URI: https://github.com/OITWPsupport
 Description: Net Price Calculator code, based on https://nces.ed.gov/ipeds/netpricecalculator/ and customized for Boise State University and to correct a11y errors.
-Version: 0.0.12
+Version: 0.0.13
 Author URI: https://webguide.boisestate.edu/
 */
 
@@ -92,7 +92,7 @@ $str = <<<EOT
 		</div>
 
 		<!-- dv_npc_s1 -->
-		<div id="dv_npc_s1" class="npcalcHidden npcalcContainer">
+		<div id="dv_npc_s1" class="npcalcContainer" style="display: none;">
 				<span class="npcalcLabel npcalcLeftColumn">Financial aid:</span>
 				<span class="npcalcRightColumn">
 					Do you plan to apply for financial aid?<br />
@@ -126,7 +126,8 @@ $str = <<<EOT
 		</div>
 
 		<!-- dv_npc_s2 -->
-		<div id="dv_npc_s2" class="npcalcHidden npcalcContainer">
+		<div id="dv_npc_s2" class="npcalcContainer" style="display: none;">
+			<div id="tblMaritalStatusQuestion">
 				<span class="npcalcLabel npcalcLeftColumn">Marital Status:<br /><br /><br /><br /></span>
 				<span class="npcalcRightColumn">
 					Are you (the student) married?<br />
@@ -134,7 +135,7 @@ $str = <<<EOT
 					<input type="radio" name="rb_maritalstatus" value="1" title="Yes, I am married or separated but not divorced." />Yes<br />
 					<input type="radio" name="rb_maritalstatus" value="0" title="No, I am not married." />No
 				</span>
-			</span>
+			</div>
 			<br />
 			<br />
 			<span>
@@ -144,6 +145,7 @@ $str = <<<EOT
 					<input type="radio" name="rb_numberofchildren" value="1" title="Yes" />Yes<br />
 					<input type="radio" name="rb_numberofchildren" value="0" title="No" />No<br />
 				</span>
+			</span>
 			<br />
 			<span>
 						<a href="javascript:GoPrevious()">Previous</a>
@@ -153,7 +155,7 @@ $str = <<<EOT
 		</div>
 
 		<!-- dv_npc_s3 -->
-		<div id="dv_npc_s3" class="npcalcHidden npcalcContainer">
+		<div id="dv_npc_s3" class="npcalcContainer" style="display: none;">
 				<span class="npcalcLabel npcalcLeftColumn">Number in Family:</span>
 				<span class="npcalcRightColumn">
 					How many people are in your family's household?<br />
@@ -202,17 +204,17 @@ $str = <<<EOT
 		</div>
 
 		<!-- dv_npc_s4 -->
-		<div id="dv_npc_s4" class="npcalcHidden npcalcContainer">
+		<div id="dv_npc_s4" class="npcalcContainer" style="display: none;">
 			<span class="npcalcLabel npcalcLeftColumn">Number in Family:</span>
 			<span class="npcalcRightColumn">
 				How many people are in your family's household?<br />
-				<span id="spanNumInFamilyHint" class="npcalcHidden">Count yourself and your spouse (if applicable).<br /></span>
-				<span id="spanNumInFamilyHintWithChildren" class="npcalcHidden">Count yourself, your spouse (if applicable), and any dependent children.<br /></span>
-				<div id="divFirstOptionForNumInFamilyWithChildren" class="npcalcHidden">
+				<span id="spanNumInFamilyHint" style="display: none;">Count yourself and your spouse (if applicable).<br /></span>
+				<span id="spanNumInFamilyHintWithChildren" style="display: none;">Count yourself, your spouse (if applicable), and any dependent children.<br /></span>
+				<div id="divFirstOptionForNumInFamilyWithChildren" style="display: none;">
 					<input type="radio" name="rb_indnuminfamily" value="One|1" title="One" />One<br />
 				</div>
 				<input type="radio" name="rb_indnuminfamily" value="Two|2" title="Two" />Two<br />
-				<div id="divNumInFamilyWithChildren" class="npcalcHidden">
+				<div id="divNumInFamilyWithChildren" style="display: none;">
 					<input type="radio" name="rb_indnuminfamily" value="Three|3" title="Three" />Three<br />
 					<input type="radio" name="rb_indnuminfamily" value="Four|4" title="Four" />Four<br />
 					<input type="radio" name="rb_indnuminfamily" value="Five|5" title="Five" />Five<br />
@@ -224,8 +226,8 @@ $str = <<<EOT
 			<span class="npcalcRightColumn">
 				Of the number in your family above, how many will be in college<br />next year?<br />
 				<input type="radio" name="rb_indnumincollege" value="One|1" title="One" />One<br />
-				<span id="spanIndNumInCollegeTwoOrMore" class="npcalcHidden"><input type="radio" name="rb_indnumincollege" value="Two or more|2" title="Two or more" />Two or more<br /></span>
-				<span id="spanIndNumInCollegeTwo" class="npcalcHidden"><input type="radio" name="rb_indnumincollege" value="Two|2" title="Two" />Two<br /></span>
+				<span id="spanIndNumInCollegeTwoOrMore" style="display: none;"><input type="radio" name="rb_indnumincollege" value="Two or more|2" title="Two or more" />Two or more<br /></span>
+				<span id="spanIndNumInCollegeTwo" style="display: none;"><input type="radio" name="rb_indnumincollege" value="Two|2" title="Two" />Two<br /></span>
 			</span>
 			<br />
 			<span class="npcalcLabel npcalcLeftColumn">Household Income:</span>
@@ -251,7 +253,7 @@ $str = <<<EOT
 		</div>
 
 		<!-- div with summary data -->
-		<div id="dv_npc_s5" class="npcalcHidden">
+		<div id="dv_npc_s5" style="display: none;">
 				<div id="dv_summary"></div>
 				<a href="javascript:ClearVars();GoTo('1');">Modify</a>
 				&nbsp;&nbsp;
@@ -259,7 +261,7 @@ $str = <<<EOT
 		</div>
 
 		<!-- dv_npc_s6 -->
-		<div id="dv_npc_s6" class="npcalcHidden npcalcContainer">
+		<div id="dv_npc_s6" class="npcalcContainer" style="display: none;">
 
 			<span class="npcalcHeader">Academic Year: 2015-16</span><br />
 
@@ -333,7 +335,7 @@ $str = <<<EOT
 
 
 
-	<div id="dv_npc_s6_r" class="npcalcDisclaimer npcalcHidden">
+	<div id="dv_npc_s6_r" class="npcalcDisclaimer" style="display: none;">
 		<a href="javascript:GoPrevious()">Previous</a>
 		&nbsp;&nbsp;
 		<a href="javascript:StartOver();">Start Over</a>
