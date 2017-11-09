@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Boise State Net Price Calculator
-Plugin URI: https://github.com/OITWPsupport
+Plugin URI: https://github.com/OITWPsupport/boise-state-npcalc
 Description: Net Price Calculator code, based on https://nces.ed.gov/ipeds/netpricecalculator/ and customized for Boise State University and to correct a11y errors.
-Version: 1.0.1
+Version: 1.0.2
 Author URI: https://webguide.boisestate.edu/
 */
 
