@@ -90,7 +90,7 @@ $str = <<<EOT
 			<strong>Note:</strong> Any information you provide on this site is confidential. This calculator does not store your responses or ask for personal identifying information of any kind.
 			<br />
 			<br />
-			<span class="npcalcShadedPadded"><strong><a href="JavaScript:GoNext()">&nbsp;I&nbsp;agree&nbsp;</a></strong></span>
+			<span><strong><a href="JavaScript:GoNext()">&nbsp;I&nbsp;agree&nbsp;</a></strong></span>
 		</div>
 
 		<!-- dv_npc_s1 -->
